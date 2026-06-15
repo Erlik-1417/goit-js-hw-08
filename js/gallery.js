@@ -84,7 +84,7 @@ gallery.addEventListener("click", (e) => {
     if(!e.target.classList.contains("gallery-image")){
         return;
     }
-    const bigImageUrl = event.target.dataset.source;
+    const bigImageUrl = e.target.dataset.source;
     const instance = basicLightbox.create(`<img src="${bigImageUrl}" width="800" height="600">`, {
         onShow: (instance) =>{
             window.addEventListener("keydown", onEscKeyPress);
